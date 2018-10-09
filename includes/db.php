@@ -15,7 +15,7 @@
 
 
     if($connection){
-        echo "We are connected";
+       // echo "We are connected";
     }else{
         
     }
