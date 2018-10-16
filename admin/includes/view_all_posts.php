@@ -1,4 +1,5 @@
 
+                       <div class="table-responsive">
                         <table class="table table-bordered table-hover">
                             <thead>
                                 <tr>
@@ -35,7 +36,7 @@
                                     echo "<td>$post_title</td>";
                                     echo "<td>$post_category_id</td>";
                                     echo "<td>$post_status</td>";
-                                    echo "<td><img class='img-thumbnail' style='width:40%;height:50%;' src='../images/$post_image' alt='image'></td>";
+                                    echo "<td><img class='img-thumbnail' style='min-width:70px;min-height:120px;' src='../images/$post_image' alt='image'></td>";
                                     echo "<td>$post_tag</td>";
                                     echo "<td>$post_comment_count</td>";
                                     echo "<td>$post_date</td>";
@@ -47,7 +48,7 @@
                             </tbody>
 
                         </table>
-                        
+                        </div>
                         
                         
                         

@@ -48,10 +48,10 @@
                             ?>
                             
                         </div>
-
-                        
-                        <div class="col-xs-6">
-                            
+                    </div>
+                </div>    
+                <div class="row">
+                    <div class="col-lg-12">
                             <table class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
@@ -73,7 +73,6 @@
 
                                 </tbody>
                             </table>
-                        </div>
                     </div>
                 </div>
                 <!-- /.row -->
