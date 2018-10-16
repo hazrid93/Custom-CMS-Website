@@ -11,7 +11,9 @@
     }
                
     $connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+    
 
+    //this is require to set db datas in UTF8 format, in header need to set <meta charset="utf-8">
     $query_setUTF = "SET NAMES 'utf8'";
     mysqli_query($connection,$query_setUTF);
 

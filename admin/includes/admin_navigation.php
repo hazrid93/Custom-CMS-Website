@@ -93,10 +93,10 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#post_dropdown"><i class="fa fa-fw fa-arrows-v"></i> Posts <i class="fa fa-fw fa-caret-down"></i></a>
                         <ul id="post_dropdown" class="collapse">
                             <li>
-                                <a href="#">View All Posts</a>
+                                <a href="post.php">View All Posts</a>
                             </li>
                             <li>
-                                <a href="#">Add Posts</a>
+                                <a href="post.php?source=add_post">Add Posts</a>
                             </li>
                         </ul>
                     </li>
@@ -104,7 +104,7 @@
                         <a href="../admin/categories.php"><i class="fa fa-fw fa-wrench"></i> Categories</a>
                     </li>
 
-                    <li class="active">
+                    <li>
                         <a href="blank-page.html"><i class="fa fa-fw fa-file"></i> Comments </a>
                     </li>
                     <li>
