@@ -98,6 +98,9 @@
                             <li>
                                 <a href="post.php?source=add_post">Add Posts</a>
                             </li>
+                            <li>
+                                <a href="post.php?source=edit_post">Edit Posts</a>
+                            </li>
                         </ul>
                     </li>
                     <li>
