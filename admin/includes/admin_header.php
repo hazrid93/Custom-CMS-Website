@@ -2,6 +2,8 @@
     ob_start will send buffer request in header of script so that once script done it will send at same time,
     right now php send each request one by one.
     when use function header() will need to buffer request in header.
+
+https://notlaura.com/output-buffering/
 -->
 <?php ob_start(); ?>
 <?php include "../includes/db.php" ?>
