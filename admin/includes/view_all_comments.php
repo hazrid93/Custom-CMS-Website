@@ -67,10 +67,9 @@
                                         echo "<td><a href='../post.php?p_id=$post_id'>$post_title</a></td>";
                                     }
                                     
-                                    echo "<td>To User</td>";
-                                    echo "<td><a href='post.php?source=edit_post&edit_post={$comment_id}'>Approve</a></td>";
-                                    echo "<td><a href='post.php?delete_post={$comment_id}'>Unapprove</a></td>";
-                                    echo "<td><a href='post.php?delete_post={$comment_id}'>DELETE</a></td>";
+                                    echo "<td><a href='comments.php?approve={$comment_id}'>Approve</a></td>";
+                                    echo "<td><a href='comments.php?unapprove={$comment_id}'>Unapprove</a></td>";
+                                    echo "<td><a href='comments.php?delete_post={$comment_id}'>DELETE</a></td>";
                                     echo "</tr>";
                                 }
     
@@ -82,19 +81,49 @@
                            
                            <?php
                                 if(isset($_GET['delete_post'])){
-                                        $post_id_delete = $_GET['delete_post'];
-                                        echo $post_id_delete;
-                                        $query = "DELETE FROM `posts` WHERE `posts`.`post_id` = {$post_id_delete}";
+                                        $the_comment_id = $_GET['delete_post'];
 
-                                        $delete_post = mysqli_query($connection,$query);
+                                        $query = "DELETE FROM `comments` WHERE `comments`.`comment_id` = {$the_comment_id}";
 
-                                        if(!$delete_post){
+                                        $delete_query = mysqli_query($connection,$query);
+
+                                        if(!$delete_query){
                                             die('QUERY FAILED' . mysqli_error($connection));
                                         }
                                     
                                         //redirect back to categories.php
-                                        header("Location: post.php");
+                                        header("Location: comments.php");
                                 }
+                           
+                                 if(isset($_GET['unapprove'])){
+                                            $the_comment_id = $_GET['unapprove'];
+
+                                            $query = "UPDATE `comments` SET `comment_status` = 'unapprove' WHERE `comment_id` = {$the_comment_id} ";
+
+                                            $unapprove_comment_query = mysqli_query($connection,$query);
+
+                                            if(!$unapprove_comment_query){
+                                                die('QUERY FAILED' . mysqli_error($connection));
+                                            }
+
+                                            //redirect back to categories.php
+                                            header("Location: comments.php");
+                                    }
+                       
+                                        if(isset($_GET['approve'])){
+                                            $the_comment_id = $_GET['approve'];
+
+                                            $query = "UPDATE `comments` SET `comment_status` = 'approve' WHERE `comment_id` = {$the_comment_id} ";
+
+                                            $approve_comment_query = mysqli_query($connection,$query);
+
+                                            if(!$approve_comment_query){
+                                                die('QUERY FAILED' . mysqli_error($connection));
+                                            }
+
+                                            //redirect back to categories.php
+                                            header("Location: comments.php");
+                                    }
                             ?>
                            
                         

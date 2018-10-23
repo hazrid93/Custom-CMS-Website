@@ -21,7 +21,7 @@
         //send using date function with format date-month-year
         $post_date = date('d-m-y');
         
-        $post_comment_count = 4;
+    //    $post_comment_count = 4;
         
         //needed function for images.
         // when submit is pressed, run this function to move image from tmp to specified folder
@@ -36,7 +36,7 @@
         
         //use single quote for values that are string
         //use function now() to format the date at $post_date to insert into db
-        $query .= "VALUES({$post_category_id}, '{$post_title}','{$post_author}',now(),'{$post_image}','{$esc_post_content}','{$post_tag}','{$post_comment_count}','{$post_status}')";
+        $query .= "VALUES({$post_category_id}, '{$post_title}','{$post_author}',now(),'{$post_image}','{$esc_post_content}','{$post_tag}', 0 ,'{$post_status}')";
         
         $create_post = mysqli_query($connection,$query);
 
