@@ -114,6 +114,29 @@ For the second one: this time you are only using one row of the result set and y
         <input value="<?php echo $post_title; ?>" type="text" class="form-control" name="post_title">
     </div>
     
+    <!--
+    <div class="form-group">
+        <label for="title">Post Categories</label>
+        <select style="display:block" name="post_category_id" id="">
+            <?php
+                $query = "SELECT * FROM users";
+                $select_categories = mysqli_query($connection,$query);
+            
+                if(!$select_categories){
+                    die('QUERY FAILED' . mysqli_error($connection));
+                }
+            
+                while($row = mysqli_fetch_assoc($select_categories)){
+                    $cat_id = $row['cat_id'];
+                    $cat_title = $row['cat_title']; 
+                    echo "<option value='$cat_id'>{$cat_title}</option>";
+                }
+                echo "</select>";
+            ?> 
+
+    </div>
+    -->
+    
     <div class="form-group">
         <label for="title">Categories</label>
         <select style="display:block" name="post_category" id="">

@@ -8,9 +8,7 @@
                                     <th>Firstname</th>
                                     <th>Lastname</th>
                                     <th>Email</th>
-                                    <th>Image</th>
                                     <th>Role</th>
-                                    <th>Date</th>
 
                           
                                 </tr>
@@ -19,8 +17,8 @@
                             <?php
     
                                 $query = "SELECT * FROM users";
-                                $select_comments = mysqli_query($connection,$query);
-                                while($row = mysqli_fetch_assoc($select_comments)){
+                                $select_users = mysqli_query($connection,$query);
+                                while($row = mysqli_fetch_assoc($select_users)){
                                     $user_id = $row['user_id'];
                                     $username = $row['username'];
                                     $user_password = $row['user_password'];
@@ -52,9 +50,7 @@
 
                                     echo "<td>$user_lastname</td>";
                                     echo "<td>$user_email</td>";
-                                    echo "<td>$user_image</td>";
                                     echo "<td>$user_role</td>";
-                                    echo "<td> </td>";
                                  //   $query = "SELECT * FROM posts WHERE post_id = $comment_post_id"; 
                                  //   $select_post_by_query_id = mysqli_query($connection,$query);
                                  //   if(!$select_post_by_query_id){
